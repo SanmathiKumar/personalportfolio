@@ -19,6 +19,7 @@ def read_root(request: Request):
 def read_projects(request: Request):
     return templates.TemplateResponse("projects.html", {"request": request})
 
+# The "/contact" route renders the "contact.html" template, allowing users to access the contact page of the portfolio website.
 @app.get("/contact", response_class=HTMLResponse)
 def read_contact(request: Request):
     return templates.TemplateResponse("contact.html", {"request": request})
